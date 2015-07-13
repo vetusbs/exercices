@@ -22,6 +22,28 @@ public class RotateArray {
     }
 
     public int[] rotate() {
-        return array;
+
+    	if (array.length == rotate || rotate == 0 || array.length == 0) {
+    		return array;
+    	}
+    	
+    	int currentPosition = 0;
+    	int currentValue = array[currentPosition];
+    	int movements = 0;
+    	int nextValue = 0;
+    	
+    	while (movements < array.length){
+    		int nextPosition = calculatePosition(currentPosition);
+    		nextValue = array[nextPosition];
+        	array[nextPosition] = currentValue;
+        	currentPosition = nextPosition;
+        	currentValue = nextValue;
+        	movements ++;
+        }
+    	return array;
+    }
+    
+    private int calculatePosition(int currentPosition) {
+    	return (currentPosition + rotate) % array.length;
     }
 }
