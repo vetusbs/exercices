@@ -15,4 +15,13 @@ public class DuplicatedNumberTest {
 		assertEquals(1,value);
 	}
 	
+	@Test public void shouldReturnLastValueWhenLastEqualsFirst() {
+		int[] array = {10,3,5,2,7,9,5,10};
+		DuplicatedNumber duplicatedNumber = new DuplicatedNumber(array);
+		
+		int value = duplicatedNumber.find();
+		
+		assertEquals(10,value);
+	}
+	
 }
