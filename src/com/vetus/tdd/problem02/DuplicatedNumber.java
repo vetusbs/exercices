@@ -20,7 +20,17 @@ public class DuplicatedNumber {
 		if (array[0] == array[array.length -1]) {
 			return array[array.length-1];
 		}
-		return -1;
+		int result = -1;
+		for (int i = 0; i < array.length; i++) {
+			for (int j = i+1; j < array.length; j++ ) {
+				if (array[j] == array[i]) {
+					result = array[j];
+					break;
+				}
+			}
+		}
+		
+		return result;
 	}
 
 }
