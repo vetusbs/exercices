@@ -1,5 +1,10 @@
 package com.vetus.tdd.problem02;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * You have got a range of numbers between 1 to N, 
  * where one of the number is repeated. 
@@ -21,15 +26,15 @@ public class DuplicatedNumber {
 			return array[array.length-1];
 		}
 		int result = -1;
+		Set<Integer> set = new HashSet<Integer>();
 		for (int i = 0; i < array.length; i++) {
-			for (int j = i+1; j < array.length; j++ ) {
-				if (array[j] == array[i]) {
-					result = array[j];
-					break;
-				}
+			if (set.contains(array[i])) {
+				result = array[i];
+				break;
+			} else {
+				set.add(array[i]);
 			}
 		}
-		
 		return result;
 	}
 
