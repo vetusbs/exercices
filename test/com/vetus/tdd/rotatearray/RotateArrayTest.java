@@ -2,6 +2,7 @@ package com.vetus.tdd.rotatearray;
 
 import org.junit.Test;
 
+import com.vetus.tdd.problem01.RotateArray;
 
 import static org.junit.Assert.assertEquals;
 

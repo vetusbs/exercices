@@ -1,4 +1,4 @@
-package com.vetus.tdd.rotatearray;
+package com.vetus.tdd.problem01;
 
 /**
  *   Problem: Rotate an array of n elements to the right by k steps.
